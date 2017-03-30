@@ -53,17 +53,10 @@ function destroy(req, res) {
   // console.log('updating with data', req.body);
   // var id = req.params.catId;
   // db.Cat.findOneAndUpdate({_id:id}, req.body, function(err, foundCat) {
-  //
-  //   //foundCat.catName = req.body.catName;
-  //   //foundCat.ownerName = req.body.ownerName;
-  //   //foundCat.age = req.body.age;
-  //   //foundCat.favoriteToys = req.body.favoriteToys;
-  //   //foundCat.favoriteFood = req.body.favoriteFood;
-  //   //foundCat.save(function(err, savedCat) {
   //     if(err) { console.log('saving altered cat failed'); }
-  //     res.json(savedCat);
+  //     res.json(foundCat);
   //   });
-  // });
+  // }
 
 module.exports = {
   index:index,
