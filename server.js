@@ -19,7 +19,7 @@ app.get('/api/cats', controllers.cats.index);
 app.get('/api/cats/:catId', controllers.cats.show);
 app.post('/api/cats', controllers.cats.create);
 app.delete('/api/cats/:catId',controllers.cats.destroy);
-//app.put('/api/cats/:catId',controllers.cats.update);
+app.put('/api/cats/:catId',controllers.cats.update);
 
 /**********
  * SERVER *

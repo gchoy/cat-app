@@ -49,26 +49,20 @@ function destroy(req, res) {
 }
 
 //PUT /api/cats/:catId
-//function update(req, res) {
-  // console.log('updating with data', req.body);
-  // var id = req.params.catId;
-  // db.Cat.findOneAndUpdate({_id:id}, req.body, function(err, foundCat) {
-  //
-  //   //foundCat.catName = req.body.catName;
-  //   //foundCat.ownerName = req.body.ownerName;
-  //   //foundCat.age = req.body.age;
-  //   //foundCat.favoriteToys = req.body.favoriteToys;
-  //   //foundCat.favoriteFood = req.body.favoriteFood;
-  //   //foundCat.save(function(err, savedCat) {
-  //     if(err) { console.log('saving altered cat failed'); }
-  //     res.json(savedCat);
-  //   });
-  // });
+function update(req, res) {
+   console.log('updating with data', req.body);
+   var id = req.params.catId;
+   db.Cat.findOneAndUpdate({_id:id}, req.body, function(err, foundCat) {
+  
+       if(err) { console.log('saving altered cat failed'); }
+       res.json(foundCat);
+     });
+}
 
 module.exports = {
   index:index,
   show:show,
   create:create,
-  destroy: destroy
-  //update:update
+  destroy: destroy,
+  update: update
 };
